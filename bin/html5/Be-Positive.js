@@ -44,6 +44,16 @@ BloodTransfusionRules = {
    * }
    * 
    */
+   // blood_inventory = {
+   //   AB_POS : 1000,
+   //   AB_NEG : 1000,
+   //   A_POS  : 1000,
+   //   A_NEG  : 1000,
+   //   B_POS  : 1000,
+   //   B_NEG  : 1000,
+   //   O_POS  : 1000,
+   //   O_NEG  : 1000
+   // }
 
   receive_patient : function (blood_inventory, patient) {
     
@@ -55,7 +65,7 @@ BloodTransfusionRules = {
       BloodType.A_POS,
       BloodType.A_NEG
     ][Math.floor(Math.random()*4)];
-
+     
   }
 
 };
