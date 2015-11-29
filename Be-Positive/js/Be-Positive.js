@@ -114,7 +114,7 @@ BloodTransfusionRules = {
         break;
 
       case "O_NEG":
-       usableTypes = "O_NEG";
+       usableTypes = ["O_NEG"];
        return searchBloodType(blood_inventory, usableTypes);
 
       default:
@@ -130,15 +130,14 @@ BloodTransfusionRules = {
     // ][Math.floor(Math.random()*4)];
     // return patient.blood_type;
 }        
-  
-function searchBloodType (blood_inventory, patient) {
  
-  var usableTypes = [];
-    for (var i = usableTypes.length -1; i >= 0; i++){
-      var bloodType = usableTypes[i];
-      if (blood_inventory[bloodType]){
-        return BloodType[bloodType];
-      }
-     }
-  }
 };
+function searchBloodType (blood_inventory, usableTypes) {
+  
+  for (var i = 0; i < usableTypes.length; i++){
+    var bloodType = usableTypes[i];
+    if (blood_inventory[bloodType]){
+      return BloodType[bloodType];
+    }
+  }
+}
